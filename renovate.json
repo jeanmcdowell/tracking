@@ -1,0 +1,9 @@
+{
+  "enabledManagers": ["npm", "github-actions"],
+  "schedule": {
+    "timezone": "UTC",
+    "interval": ["weekly"]
+  },
+  "labels": ["type: chore"],
+  "reviewers": ["jeanmcdowell"]
+}
