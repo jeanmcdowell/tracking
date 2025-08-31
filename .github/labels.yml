@@ -1,0 +1,71 @@
+# Label Configuration for GitHub Issues and Pull Requests
+# This file defines standardized labels for consistent issue and PR categorization
+# Note: GitHub doesn't auto-import labels.yml by default - use a label sync action
+
+# Type Labels - Categorize the nature of the issue/PR
+- name: "type: bug"
+  color: "d73a4a"
+  description: "Something isn't working as expected"
+
+- name: "type: feat"
+  color: "a2eeef"
+  description: "New feature or enhancement request"
+
+- name: "type: chore"
+  color: "fef2c0"
+  description: "Maintenance tasks, dependencies, or tooling"
+
+- name: "type: docs"
+  color: "0075ca"
+  description: "Documentation improvements or updates"
+
+- name: "type: test"
+  color: "7057ff"
+  description: "Testing related changes or improvements"
+
+- name: "type: ci"
+  color: "bfd4f2"
+  description: "CI/CD pipeline changes or improvements"
+
+# Priority Labels - Indicate urgency and importance
+- name: "priority: P0"
+  color: "b60205"
+  description: "Critical - immediate attention required"
+
+- name: "priority: P1"
+  color: "d93f0b"
+  description: "High priority - should be addressed soon"
+
+- name: "priority: P2"
+  color: "fbca04"
+  description: "Medium priority - normal timeline"
+
+- name: "priority: P3"
+  color: "0e8a16"
+  description: "Low priority - can be addressed when convenient"
+
+# Status Labels - Track the current state of issues/PRs
+- name: "status: needs-triage"
+  color: "ededed"
+  description: "Needs initial review and categorization"
+
+- name: "status: needs-info"
+  color: "d4c5f9"
+  description: "Waiting for more information from reporter"
+
+- name: "status: ready"
+  color: "c5def5"
+  description: "Ready to be worked on"
+
+# Area Labels - Indicate which part of the codebase is affected
+- name: "area: backend"
+  color: "f9d0c4"
+  description: "Backend/server-side changes"
+
+- name: "area: frontend"
+  color: "c5f5c5"
+  description: "Frontend/client-side changes"
+
+- name: "area: devops"
+  color: "e99695"
+  description: "DevOps, infrastructure, or deployment changes"
