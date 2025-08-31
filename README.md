@@ -95,6 +95,7 @@ tracking/
 This repository uses several automated workflows to maintain code quality and streamline development:
 
 ### Dependabot
+
 - **Configuration**: [`.github/dependabot.yml`](.github/dependabot.yml)
 - **Groups**: Dependencies organized into logical groups (TypeScript, Testing, etc.)
 - **Auto-merge**: Automatically merges safe patch/minor updates for:
@@ -102,27 +103,32 @@ This repository uses several automated workflows to maintain code quality and st
   - GitHub Actions versions with patch/minor updates
 
 ### Auto-triage
+
 - **Workflow**: [`.github/workflows/auto-triage.yml`](.github/workflows/auto-triage.yml)
 - Automatically applies `needs-triage` label to new issues
 - Helps maintain organized issue tracking
 
 ### Label Sync
+
 - **Workflow**: [`.github/workflows/labels.yml`](.github/workflows/labels.yml)
 - **Configuration**: [`.github/labels.yml`](.github/labels.yml)
 - Synchronizes repository labels with predefined configurations
 - Runs weekly and on configuration changes
 
 ### CodeQL
+
 - **Workflow**: [`.github/workflows/codeql.yml`](.github/workflows/codeql.yml)
 - Automated security scanning and code analysis
 - Runs on pushes and pull requests to detect vulnerabilities
 
 ### Release Please
+
 - Automated release management based on Conventional Commits
 - Generates changelogs and handles semantic versioning
 - Creates release PRs automatically
 
 ### Branch Protection
+
 - Configured through GitHub settings (not in files)
 - Requires PR reviews and status checks
 - Prevents direct pushes to protected branches
@@ -139,6 +145,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Links
 
+- [AI Onboarding](ai/onboarding.md)
 - [Documentation](docs)
 - [Issues](https://github.com/jeanmcdowell/tracking/issues)
 - [Pull Requests](https://github.com/jeanmcdowell/tracking/pulls)
