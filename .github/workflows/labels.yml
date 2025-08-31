@@ -1,5 +1,4 @@
 name: Label Sync
-
 on:
   push:
     branches:
@@ -7,6 +6,10 @@ on:
     paths:
       - '.github/labels.yml'
   workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
 
 jobs:
   sync-labels:
@@ -21,6 +24,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           yaml-file: .github/labels.yml
           dry-run: false
+          skip_delete: false
           exclude: |
             help*
             *question
