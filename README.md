@@ -1,7 +1,6 @@
 # Tracking
 
-[![CI](https://github.com/jeanmcdowell/tracking/actions/workflows/ci.yml/badge.svg)](https://github.com/jeanmcdowell/tracking/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/jeanmcdowell/tracking/actions/workflows/ci.yml/badge.svg)](https://github.com/jeanmcdowell/tracking/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
@@ -90,6 +89,45 @@ tracking/
 ├── .github/            # GitHub workflows and templates
 └── public/             # Static assets
 ```
+
+## Automation & Workflows
+
+This repository uses several automated workflows to maintain code quality and streamline development:
+
+### Dependabot
+- **Configuration**: [`.github/dependabot.yml`](.github/dependabot.yml)
+- **Groups**: Dependencies organized into logical groups (TypeScript, Testing, etc.)
+- **Auto-merge**: Automatically merges safe patch/minor updates for:
+  - Development dependencies ([`.github/workflows/dependabot-auto-merge.yml`](.github/workflows/dependabot-auto-merge.yml))
+  - GitHub Actions versions with patch/minor updates
+
+### Auto-triage
+- **Workflow**: [`.github/workflows/auto-triage.yml`](.github/workflows/auto-triage.yml)
+- Automatically applies `needs-triage` label to new issues
+- Helps maintain organized issue tracking
+
+### Label Sync
+- **Workflow**: [`.github/workflows/labels.yml`](.github/workflows/labels.yml)
+- **Configuration**: [`.github/labels.yml`](.github/labels.yml)
+- Synchronizes repository labels with predefined configurations
+- Runs weekly and on configuration changes
+
+### CodeQL
+- **Workflow**: [`.github/workflows/codeql.yml`](.github/workflows/codeql.yml)
+- Automated security scanning and code analysis
+- Runs on pushes and pull requests to detect vulnerabilities
+
+### Release Please
+- Automated release management based on Conventional Commits
+- Generates changelogs and handles semantic versioning
+- Creates release PRs automatically
+
+### Branch Protection
+- Configured through GitHub settings (not in files)
+- Requires PR reviews and status checks
+- Prevents direct pushes to protected branches
+
+All workflows are located in [`.github/workflows/`](.github/workflows/) and can be monitored via the [Actions tab](https://github.com/jeanmcdowell/tracking/actions).
 
 ## Contributing
 
