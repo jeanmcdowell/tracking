@@ -1,5 +1,4 @@
 name: Dependabot Auto-Merge
-
 on:
   pull_request:
     types:
@@ -39,6 +38,17 @@ jobs:
       - name: Auto-merge for safe dev dependency updates
         if: |
           steps.metadata.outputs.dependency-type == 'direct:development' &&
+          (steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
+           steps.metadata.outputs.update-type == 'version-update:semver-minor')
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: squash
+      
+      - name: Auto-merge for safe GitHub Actions updates
+        if: |
+          steps.metadata.outputs.package-ecosystem == 'github_actions' &&
           (steps.metadata.outputs.update-type == 'version-update:semver-patch' ||
            steps.metadata.outputs.update-type == 'version-update:semver-minor')
         uses: peter-evans/enable-pull-request-automerge@v3
