@@ -21,7 +21,7 @@
     "eslint-config-prettier": "^9",
     "prettier": "^3",
     "vitest": "^2",
-    "jsdom": "^24",
+    "jsdom": "^26",
     "@vitest/coverage-v8": "^2",
     "vite": "^5",
     "@types/node": "^20",
