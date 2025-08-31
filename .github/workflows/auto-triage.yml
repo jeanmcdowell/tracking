@@ -1,0 +1,16 @@
+name: Auto-triage
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Add needs-triage label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: 'status: needs-triage'
