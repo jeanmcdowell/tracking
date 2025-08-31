@@ -10,6 +10,24 @@ updates:
     labels:
       - "type: chore"
       - "status: ready"
+    groups:
+      eslint:
+        patterns:
+          - "eslint*"
+          - "@typescript-eslint*"
+          - "eslint-config*"
+          - "eslint-plugin*"
+      typescript:
+        patterns:
+          - "typescript"
+          - "ts-node"
+          - "@types/*"
+      testing:
+        patterns:
+          - "vitest"
+          - "jsdom"
+          - "@vitest/*"
+          - "@testing-library/*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
@@ -20,3 +38,7 @@ updates:
     labels:
       - "type: chore"
       - "status: ready"
+    groups:
+      actions:
+        patterns:
+          - "*"
