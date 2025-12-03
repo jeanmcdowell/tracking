@@ -4,6 +4,7 @@
   "description": "A comprehensive energy and resource tracking application",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
